@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="./jquery-3.4.1.min.js"></script>
-    <script src="./popper.min.js"></script>
-    <script src="./bootstrap.min.js"></script>
-    <script src="./jqcrud (3).js"></script>
-    <link rel="stylesheet" href="./bootstrap.min.css" />
-    <link rel="stylesheet" href="./jqstyles.css" />
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="jqcrud (3).js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="jqstyles.css" />
   </head>
   <body class="container">
-    <h1>Recipies API Client</h1>
+    <h1>User API Client</h1>
 
     <!-- Button trigger modal -->
     <button
@@ -18,7 +18,7 @@
       data-toggle="modal"
       data-target="#addModal"
     >
-      Add Recipe
+      Add User
     </button>
 
     <!-- Modal -->
@@ -33,7 +33,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Add New Recipe</h5>
+            <h5 class="modal-title">Add New User</h5>
             <button
               type="button"
               class="close"
@@ -45,36 +45,36 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <label for="title">Title</label>
+              <label for="title">Name</label>
               <input
                 type="text"
                 class="form-control"
                 name="title"
                 id="title"
                 aria-describedby="titleHelp"
-                placeholder="Title of the Recipe"
+                placeholder="Name of the User"
               />
               <small id="titleHelp" class="form-text text-muted"
-                >Enter Title of the Recipe</small
+                >Enter Name of the User</small
               >
             </div>
             <div class="form-group">
-              <label for="body">Body</label>
+              <label for="body">Email</label>
               <input
-                type="text"
+                type="email"
                 class="form-control"
                 name="body"
                 id="body"
                 aria-describedby="bodyHelp"
-                placeholder="Recipe Details"
+                placeholder="User Email"
               />
               <small id="bodyHelp" class="form-text text-muted"
-                >Enter Details</small
+                >Enter Email</small
               >
             </div>
           </div>
           <div class="modal-footer">
-            <button id="addBtn" class="btn btn-info">Add Recipe</button>
+            <button id="addBtn" class="btn btn-info">Add User</button>
             <button
               type="button"
               class="btn btn-secondary"
@@ -115,7 +115,7 @@
           <div class="modal-body">
             <input type="hidden" id="updateId" /> <br />
             <div class="form-group">
-              <label for="updateTitle">Title</label>
+              <label for="updateTitle">Name</label>
               <input
                 type="text"
                 class="form-control"
@@ -123,19 +123,22 @@
                 id="updateTitle"
                 aria-describedby="updateHelpId"
                 placeholder=""
+                disabled
               />
-              <small id="updateHelpId" class="form-text text-muted"
-                >Enter Title to Update</small
-              >
             </div>
             <div class="form-group">
-              <label for="updateBody">Body</label>
-              <textarea
+              <label for="updateBody">Email</label>
+              <input
+                type="email"
                 class="form-control"
                 name="updateBody"
                 id="updateBody"
-                rows="3"
-              ></textarea>
+                aria-describedby="updateHelpId"
+                placeholder="Enter Email here"
+              />
+              <small id="updateHelpId" class="form-text text-muted"
+                >Enter Email to Update</small
+              >
             </div>
           </div>
           <div class="modal-footer">
